@@ -16,8 +16,7 @@ def dumpRotateImage(img,degree,pt1,pt2,pt3,pt4):
         print("checked for shape".format(im.shape))
     except AttributeError:
         print("shape not found")    
-        
-        
+               
     #height,width=img.shape[:2]
     heightNew = int(width * fabs(sin(radians(degree))) + height * fabs(cos(radians(degree))))
     widthNew = int(height * fabs(sin(radians(degree))) + width * fabs(cos(radians(degree))))
@@ -50,12 +49,10 @@ def is_contains_chinese(strs):
     return False
 
 
-
 # f=open('D:\\codes\\crop_img\\txt\\1.txt', mode='r', encoding='utf-8')
     # #lines = f.read()
 # lines = f.readlines()
 # print('lines',lines)
-
 
 ''' 
 input_path = "/home/zhoucs/changshi/data/crop_img/input"
@@ -70,8 +67,7 @@ save_path = "D:\\codes\\crop_img\\icdar2019\\save"
 
 #print('input_path',input_path)
 filelist = os.listdir(input_path)
-for item in filelist:
-     
+for item in filelist:     
     img_path = os.path.join(input_path, item)
     im=cv2.imread(img_path)
     try:     
@@ -102,16 +98,12 @@ for item in filelist:
     #im_width = im.shape[1]
     #im_height = im.shape[0]
     
- 
- 
     try:
         im_height,im_width=im.shape[:2]
         print("checked for shape".format(im.shape))
     except AttributeError:
         print("shape not found")
     
- 
- 
     # for i,rec in enumerate(lines):
     
         # rec=[float(item) for item in rec]
@@ -134,9 +126,6 @@ for item in filelist:
         # if rec[3]>=im_height:
             # lines[i][3] = im_height-1
  
- 
- 
-
     index=0    
     for line in lines:
         rec=line.split(',')[:8]       
@@ -149,18 +138,12 @@ for item in filelist:
         print('judge_img',judge_img)
         
         judge_chn = is_contains_chinese(label)
-        
-        
+                
         i=0
         if judge_chn==True:
-        #if judge_img==False and label !='###' and label !=' ':
-            
-        
+        #if judge_img==False and label !='###' and label !=' ':                
             rec=[float(item) for item in rec]
-            print('rec1',rec)
-            
-                
-            
+            print('rec1',rec)      
             if rec[0]<0:
                 rec[0] = 0
             if rec[1]<0:
@@ -179,10 +162,7 @@ for item in filelist:
                 rec[2] = rec[2] + 5
             if rec[3]>=im_height:
                 rec[3] = im_height-1
-            
-            
-            
-            
+           
             #print('int(rec[0])',int(rec[0]))
             pt1 = (rec[0],rec[1])           
             pt2 = (rec[2],rec[3])
@@ -193,17 +173,14 @@ for item in filelist:
             box_height = pt4[1]-pt1[1]
             if  box_height <= 10 or box_height > 1.1*box_width:
                 continue
-            
-            
-            
+  
             partImg = dumpRotateImage(im,degrees(atan2(pt2[1]-pt1[1],pt2[0]-pt1[0])),pt1,pt2,pt3,pt4)
             #print('partImg',partImg)
             
             index += 1
             img_name = pre_img_fn + "_p" + str(index) + ".jpg"
             print(img_name)
-            cv2.imwrite(img_name,partImg)
-            
+            cv2.imwrite(img_name,partImg)           
             txt_name = pre_img_fn + "_p" + str(index) + '.txt'
             
             f=open(txt_name, mode='w', encoding='utf-8')
