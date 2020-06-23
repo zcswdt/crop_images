@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import codecs
 from math import *
-
+import sys
 
 def dumpRotateImage(img,degree,pt1,pt2,pt3,pt4):
     # if fabs(degree) > 50:
@@ -54,16 +54,10 @@ def is_contains_chinese(strs):
 # lines = f.readlines()
 # print('lines',lines)
 
-''' 
-input_path = "/home/zhoucs/changshi/data/crop_img/input"
-txt_path = "/home/zhoucs/changshi/data/crop_img/txt"
-save_path = "/home/zhoucs/changshi/data/crop_img/save"
-'''
+input_path = sys.argv[1]
+txt_path = sys.argv[2]
+save_path = sys.argv[3]
 
-input_path = "D:\\codes\\crop_img\\icdar2019\\images"
-txt_path = "D:\\codes\\crop_img\\icdar2019\\gt"
-save_path = "D:\\codes\\crop_img\\icdar2019\\save"
-#save_txt_path=
 
 #print('input_path',input_path)
 filelist = os.listdir(input_path)
