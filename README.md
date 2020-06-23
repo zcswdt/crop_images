@@ -11,4 +11,4 @@ Run this code with these three parameters
     save_path表示保存裁剪下来子图片的文件夹
 # 输入图片
 ![image](https://github.com/zcswdt/crop_images/raw/master/input_path/tr_img_03001.jpg)
-![image](https://github.com/zcswdt/crop_images/raw/master/input_path/tr_img_03001.jpg)
+![image](https://github.com/zcswdt/crop_images/blob/master/save_path/tr_img_03001_p1.jpg)
