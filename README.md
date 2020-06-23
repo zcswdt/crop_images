@@ -6,6 +6,6 @@ Run this code with these three parameters
 -------
 
 # python crop_img.py input_path txt_path save_path<br>
-## input_path表示需要裁剪的图片,<br>
-### txt_path表示保存裁剪下来子图片的坐标,<br>
-#### save_path表示保存裁剪下来子图片的文件夹<br>
+    input_path表示需要裁剪的图片,<br>
+    txt_path表示保存裁剪下来子图片的坐标,<br>
+    save_path表示保存裁剪下来子图片的文件夹<br>
