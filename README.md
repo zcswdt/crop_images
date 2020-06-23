@@ -4,8 +4,9 @@ crop_images
 --------
 Run this code with these three parameters
 -------
-
-# python crop_img.py input_path txt_path save_path<br>
+```
+python crop_img.py input_path txt_path save_path<br>
+```
     input_path表示需要裁剪的图片的文件夹
     txt_path表示保存裁剪下来子图片的坐标的文件夹
     save_path表示保存裁剪下来子图片的文件夹
