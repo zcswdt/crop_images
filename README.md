@@ -12,3 +12,4 @@ Run this code with these three parameters
 # 输入图片
 ![image](https://github.com/zcswdt/crop_images/raw/master/input_path/tr_img_03001.jpg)
 ![image](https://github.com/zcswdt/crop_images/blob/master/save_path/tr_img_03001_p1.jpg)
+<img src="./save_path/*.jpg" width="1000" height="600" title="crop_image">
