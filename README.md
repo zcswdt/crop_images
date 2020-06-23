@@ -9,3 +9,6 @@ Run this code with these three parameters
     input_path表示需要裁剪的图片的文件夹
     txt_path表示保存裁剪下来子图片的坐标的文件夹
     save_path表示保存裁剪下来子图片的文件夹
+# 输入图片
+
+![](https://github.com/zcswdt/crop_images/raw/input_path/)
